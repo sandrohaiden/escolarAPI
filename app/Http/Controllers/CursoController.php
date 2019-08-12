@@ -8,7 +8,8 @@ use DB;
 class CursoController extends Controller
 {
     public function lista(){
-		return DB::select('select * from curso');
+		return DB::select('select curso.*, pro.nome as professor, pro.id_profesor from curso 
+                            inner join professor pro on curso.id_professor = pro.id_professor');
     }
     
     public function cadastrar(Request $request){

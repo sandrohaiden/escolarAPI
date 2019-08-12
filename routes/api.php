@@ -24,13 +24,13 @@ Route::post('/professores/{id}/', 'ProfessorController@atualizar');
 
 //%%%%%%%%%%%%%%%%%%%%%%%%% Curso
 
-Route::get('/curso/', 'CursoController@lista');
+Route::get('/cursos/', 'CursoController@lista');
 
-Route::post('/curso/', 'CursoController@cadastrar');
+Route::post('/cursos/', 'CursoController@cadastrar');
 
-Route::get('/curso/{id}/', 'CursoController@deletar');
+Route::get('/cursos/{id}/', 'CursoController@deletar');
 
-Route::post('/curso/{id}/', 'CursoController@atualizar');
+Route::post('/cursos/{id}/', 'CursoController@atualizar');
 
 //%%%%%%%%%%%%%%%%%%%%%%%%% ALuno
 

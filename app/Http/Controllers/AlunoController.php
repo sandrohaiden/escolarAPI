@@ -8,7 +8,9 @@ use DB;
 class AlunoController extends Controller
 {
     public function lista(){
-		return DB::select('select * from aluno');
+		return DB::select('select aluno.*, c.nome, c.id_curso curso, p.nome professor from aluno
+		                    inner join curso c on aluno.id_curso = c.id_curso
+		                    inner join professor p on c.id_professor = p.id_professor');
     }
     
     public function cadastrar(Request $request){
